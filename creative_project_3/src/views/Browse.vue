@@ -1,28 +1,28 @@
 <template>
 <div>
-	<div class="pure-menu pure-menu-horizontal">
-		<ul class="pure-menu-list">
-			<li class="pure-menu-item"><a @click="select('Name')" href="#" class="pure-menu-link">Name</a></li>
-			<li class="pure-menu-item"><a @click="select('Ingredient')" href="#" class="pure-menu-link">Ingredient</a></li>
-		</ul>
+	<div class="menu">
+		<p>Search By:</p>
+		<a @click="select('Name')" href="#" v-bind:class="{active: nameIsActive}">Name</a> |
+		<a @click="select('Ingredient')" href="#" v-bind:class="{active: !nameIsActive}">Ingredient</a>
+		<form class="pure-form">
+			<i class="fas fa-search"></i><input v-model="searchText" />
+		</form>
 	</div>
-	<form class="pure-form">
-		<i class="fas fa-search"></i><input v-model="searchText" />
-	</form>
-	<RecipesList :recipes="recipes" />
+	<div class="recipe" v-for="recipe in recipes" :key="recipe.id">
+		<div class="info">
+			<router-link :to="{ name: 'Recipe', params: {recipeName: recipe.name }}">{{recipe.name}}</router-link>
+			<img :src="'/images/recipes/' + recipe.image">
+		</div>
+	</div>
 </div>
 </template>
 
 <script>
-import RecipesList from "../components/RecipesList.vue"
 export default {
 	name: 'Browse',
-	components: {
-		RecipesList
-	},
 	data() {
 		return {
-			filter: '',
+			filter: 'Name',
 			searchText: ''
 		}
 	},
@@ -38,7 +38,10 @@ export default {
 			} else {
 				return null
 			}
-		}
+		},
+		nameIsActive() {
+			return this.filter === "Name"
+		},
 	},
 	methods: {
 		select(filter) {
@@ -47,3 +50,21 @@ export default {
 	}
 }
 </script>
+
+<style>
+.menu p {
+	margin: 0px;
+}
+
+a {
+	color: #aab1bf;
+}
+
+.active {
+	color: #555c73;
+}
+
+.recipe a {
+	color: #000000
+}
+</style>
