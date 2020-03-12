@@ -15,6 +15,12 @@ export default {
 
 <style>
 .logo {
-	width: 65%;
+	width: 100%;
+}
+
+@media only screen and (min-width: 961px) {
+	.logo {
+		width: 65%;
+	}
 }
 </style>

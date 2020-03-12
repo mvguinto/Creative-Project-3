@@ -5,29 +5,34 @@
 		<router-link to="/Browse">Browse</router-link> |
 		<router-link :to="{ name: 'Recipe', params: {recipeName: 'random' }}">Random</router-link>
 	</div>
-	<router-view />
+	<div class="content-wrapper">
+		<router-view />
+	</div>
 </div>
 </template>
 
 <style>
 body {
 	background: #321e17;
+	padding: 5%;
 }
 
 #app {
 	font-family: 'Indie Flower', cursive;
-	font-size: 25px;
+	font-size: 15px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
-	margin: 5%;
-	padding: 5% 15%;
 	background: #FFFFFF;
 }
 
+.content-wrapper {
+	margin: 5%;
+	padding: 0% 15% 10% 15%;
+}
+
 #nav {
-	padding: 7.5%;
-	margin-bottom: 10%;
+	padding: 10% 7.5%;
 	background: #FFFFFF url("/images/Rolling-Pin.jpg") no-repeat center;
 	background-size: 100%;
 }
@@ -39,5 +44,20 @@ body {
 
 #nav a.router-link-exact-active {
 	color: #321e17;
+}
+
+@media only screen and (min-width: 961px) {
+	#app {
+		font-size: 25px;
+	}
+
+	#nav {
+		background-size: 75%
+	}
+
+	.content-wrapper {
+		margin: 0%;
+		padding: 0% 15% 10% 15%;
+	}
 }
 </style>
