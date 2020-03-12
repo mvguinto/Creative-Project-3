@@ -2,7 +2,7 @@ let mock = [{
     id: 1,
     name: "Bread",
     country: "United States",
-    image: 'bread.jpg',
+    image: 'Bread.jpg',
     ingredients: [{
         name: "active dry yeast",
         measurement: "1 package"

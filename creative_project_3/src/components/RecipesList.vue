@@ -17,4 +17,4 @@ export default {
 		recipes: Array
 	},
 }
-</script>
+</script>]

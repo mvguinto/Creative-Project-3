@@ -12,9 +12,14 @@ export default {
 		recipeName: String
 	},
 	data() {
-		return {
-			recipe: this.$root.$data.recipes.find(recipe => recipe.name === this.recipeName)
-		}
-	}
+		if (this.recipeName === "random") {
+			return {
+				recipe: this.$root.$data.recipes[Math.floor(Math.random() * this.$root.$data.recipes.length)]
+			}
+		} else
+			return {
+				recipe: this.$root.$data.recipes.find(recipe => recipe.name === this.recipeName)
+			}
+	},
 }
 </script>
