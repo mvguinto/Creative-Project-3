@@ -1,7 +1,6 @@
 <template>
 <div class="home">
-	<img alt="Vue logo" src="../assets/logo.png">
-	<h1>{{recipe.id}}</h1>
+	<img :src="'/images/recipes/' + recipe.image">
 </div>
 </template>
 

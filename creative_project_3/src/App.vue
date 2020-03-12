@@ -11,7 +11,7 @@
 
 <style>
 body {
-	background: #80808C;
+	background: #321e17;
 }
 
 #app {
@@ -20,21 +20,24 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
-	margin: 40px;
-	padding: 20px 25%;
+	margin: 5%;
+	padding: 5% 15%;
 	background: #FFFFFF;
 }
 
 #nav {
-	padding: 30px;
+	padding: 7.5%;
+	margin-bottom: 10%;
+	background: #FFFFFF url("/images/Rolling-Pin.jpg") no-repeat center;
+	background-size: 100%;
 }
 
 #nav a {
 	font-weight: bold;
-	color: #2c3e50;
+	color: #f2ebc9;
 }
 
 #nav a.router-link-exact-active {
-	color: #42b983;
+	color: #321e17;
 }
 </style>
