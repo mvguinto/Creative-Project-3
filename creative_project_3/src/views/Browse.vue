@@ -80,6 +80,7 @@ a {
 	flex-wrap: wrap;
 	justify-content: center;
 	padding: 25px;
+	padding-bottom: 0px;
 }
 
 .recipe {
@@ -98,7 +99,7 @@ a {
 }
 
 .info p {
-	font-size: 24px;
+	font-size: 12px;
 	margin: 0px;
 }
 
@@ -116,6 +117,10 @@ a {
 		width: 150px;
 	}
 
+	.info p {
+		font-size: 24px;
+		margin: 0px;
+	}
 
 	input {
 		width: 40%;

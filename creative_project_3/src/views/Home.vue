@@ -1,9 +1,8 @@
 <template>
 <div class="home">
 	<img alt="Chef logo" src="/images/Little-Chef.jpg" class="logo">
-	<h1>Welcome to "Hello World"!</h1>
-	<p>Click on browse to search for recipes by name or ingredient.</p>
-	<p>Click on random to view one random recipe.</p>
+	<h1>Welcome to:</h1>
+	<h1>Recipes for the Reasonably Qualified!</h1>
 </div>
 </template>
 
@@ -16,6 +15,10 @@ export default {
 <style>
 .logo {
 	width: 100%;
+}
+
+.home h1 {
+	font-size: 30px;
 }
 
 @media only screen and (min-width: 961px) {
